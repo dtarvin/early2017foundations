@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: yellow;
+}
+
+.left {
+    float: left;
+    margin: 3vmin;
+    margin-left: 0;
+    clear: right;
+}
+
+.right {
+    float: right;
+    margin: 3vmin;
+    margin-right: 0;
+    border: 1px solid black;
+    clear: right;
+}
+
+header {
+    height: 15vh;
+    background-color: gray;
+}
+
+footer {
+    height: 10vh;
+    background-color: green;
+    clear: both;
+}
+
+#main {
+    width: 70%;
+    background-color: orange;
+    min-height: 75vh;
+    float: left;
+}
+
+#side {
+    width: 30%;
+    background-color: blue;
+    min-height: 75vh;
+    float: right;
+}

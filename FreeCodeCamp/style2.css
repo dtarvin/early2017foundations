@@ -1,0 +1,10 @@
+body {
+    background-color: red;
+}
+
+div {
+    width: 100vw;
+    height: 10vh;
+    color: rgb(172,211,115);
+}
+

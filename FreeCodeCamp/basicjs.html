@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #popup {
+                display: none;
+                width: 25vw;
+                height: 25vh;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 1px solid black;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+                
+                .popupResize {
+                    width: 50vw;
+                    height: 50vh;
+                    font-size: 10vh;
+                }
+                
+                #close {
+                    color: red;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to my page!</h1>
+        <button type="button">Click Me!</button>
+        <div id="popup">
+            <span id="close">x</span>
+            Text
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            var x = 5;
+            var y = 20;
+            console.log(x+y);
+            $("button").click(function(event){
+                $("#popup").show(); 
+            });
+            $("#close").click(function(event){
+                $("#popup").hide();
+            });
+        </script>
+    </body>
+</html>
