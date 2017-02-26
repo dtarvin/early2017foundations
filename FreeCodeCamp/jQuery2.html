@@ -22,8 +22,10 @@
     <script
   src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
         <script>
-            $("#go").click(function(){
-               var input = $("#input").val();
+            
+            
+            function changeBox() {
+                var input = $("#input").val();
                 debugger;
                 if(parseFloat(input)){
                    $("#box").css({
@@ -36,7 +38,15 @@
                         backgroundColor: input
                     });
                 }
+            }
+            
+            $("#go").click(changeBox);
+            $("#input").keypress(function(e) {  /* can also be function(event) */
+                if (e.charCode == 13) {     /* or event.charCode */
+                    changeBox();
+                }
             });
+            
         </script>
     </body>
 </html>

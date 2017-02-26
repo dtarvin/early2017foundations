@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <h1>David's Number Game</h1>
+        <br /><br /><br />
+        <p>Enter a number between 1 and 100 to see if you can guess the computer's number.</p>
+        <label>Guess: </label>
+        <input type="text" id="numGuess" />
+        <button type="button" id="guess">Guess!</button>
+        
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            var compNum = parseInt(Math.random()*100)+1;
+            $("#guess").click(function(){
+                var gNum = $("#numGuess").val();
+                $(".guessMsg").remove();
+                $("body").append("<div class='guessMsg'><br />Your guess is: " + gNum + "<br />");  
+                if (compNum > gNum){
+                    if (compNum - gNum <= 5){
+                        $(".howClose").remove();
+                        $("body").append("<div class='howClose'>You're so close!</div>");
+                    }
+                    else if (compNum - gNum > 5 && compNum - gNum <= 10){
+                        $(".howClose").remove();
+                        $("body").append("<div class='howClose'>A little higher</div>");
+                    }
+                    else{
+                        $(".howClose").remove();
+                        $("body").append("<div class = 'howClose'>Higher</div>");
+                    }
+                }
+                else if (compNum < gNum){
+                    if (gNum - compNum <= 5){
+                        $(".howClose").remove();
+                        $("body").append("<div class='howClose'>You're so close!</div>");
+                    }
+                    else if (gNum - compNum > 5 && gNum - compNum <= 10){
+                        $(".howClose").remove();
+                        $("body").append("<div class='howClose'>A little lower</div>");
+                    }
+                    else{
+                        $(".howClose").remove();
+                        $("body").append("<div class='howClose'>Lower</div>");
+                    }
+                }
+            else {
+                $("body").append("You're right!");
+                function randomColor(){
+                    var red = parseInt(Math.random()*255);
+                    var green = parseInt(Math.random()*255);
+                    var blue = parseInt(Math.random()*255);
+                    return "rgb("+red+", "+green+", "+blue+")";
+                }
+            
+                var intervalId = setInterval(function(){
+                    $("body").css("background-color", randomColor());
+                }, 500);
+                }
+            });
+            
+        </script>
+    </body>
+</html>
