@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <h1>Header 1</h1>
+        <span id="counter"></span>
+        <span>Text</span>
+        
+        <div>
+            <span>More Text</span>
+            <span>Text</span>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <button type="button" id="crazy">Go Crazy!</button>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            function changeBackgroundColor(element, color){
+                $(element).css("background-color", color);
+            }
+            
+            $.fn.changeBGColor = function(options){
+                var settings = $.extend({
+                    color: "red",
+                    mode: "normal"
+                }, options);
+                
+                var randomColor = function(){
+                    var red = parseInt(Math.random() * 25)*10;
+                    var green = parseInt(Math.random() * 25)*10;
+                    var blue = parseInt(Math.random() * 25)*10;
+                    return "rgb("+red+", "+green+", "+blue+")";
+                }
+                
+                var changeColor = function(element){
+                    if(settings.color == "random"){
+                        if(chosenColor == null){
+                            chosenColor = randomColor();
+                            $(element).css("background-color", chosenColor);
+                            return chosenColor;
+                        }else{
+                            var color = randomColor();
+                            $(element).css("background-color", color);
+                            return color;
+                        }
+                    }else{
+                        $(element).css("background-color", settings.color);
+                        return settings.color;
+                    }
+                }
+                
+                var counter = 0;
+                var keepTrying = function (){
+                    var result = changeColor(this);
+                    if(result != chosenColor){
+                        counter++;
+                        $("#counter").text(counter);
+                        var newKeepTrying = keepTrying.bind(this);
+                        setTimeout(newKeepTrying, 0);
+                    }
+                }
+                
+                var chosenColor;
+                this.each(function(){
+                    if(chosenColor == null){
+                        changeColor(this);
+                    }else if(chosenColor != null && settings.mode == "crazySlotMachine"){
+                        var result = changeColor(this);
+                        if(result != chosenColor){
+                            var newKeepTrying = keepTrying.bind(this);
+                            setTimeout(newKeepTrying, 0);
+                        }
+                    }
+                    
+                });
+
+                return this;
+            }
+            
+            $("#crazy").click(function(){
+               $("*:visible:not(br)").changeBGColor({color: "random", mode: "crazySlotMachine"}); 
+            });
+        </script>
+    </body>
+</html>
