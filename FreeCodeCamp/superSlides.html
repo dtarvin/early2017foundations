@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="superslides.css" rel="stylesheet" type="text/css" />
+        <link href="superslidesextra_css-2.css" rel="stylesheet" type="text/css" />
+        <style>
+            
+            body{
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="slides">
+          <div class="slides-container">
+            <img src="http://www.blastr.com/sites/blastr/files/All_.png" alt="">
+            <img src="http://picphobia.com/wp-content/uploads/2016/02/tardis.jpg" alt="">
+          </div>
+            <nav class="slides-navigation">
+                <a href="#" class="next">
+                    <i class="icon-chevron-right"></i>
+                </a>
+                <a href="#" class="prev">
+                    <i class="icon-chevron-left"></i>
+                </a>
+            </nav>
+        </div>
+        
+        
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
+        <script src="jquery.superslides.js"></script>
+        <script>
+            debugger;
+            $("#slides").superslides();
+        </script>
+    </body>
+</html>

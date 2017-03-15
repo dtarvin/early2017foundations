@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            #container{
+                perspective: 1px;
+                min-height: 100vh;
+                background-color: lightgray;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            
+            #background{
+                width: 100%;
+                transform: translateZ(-5px) scale(6); /*scale is 1 more than px*/
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -2;
+            }
+            
+            #hotair{
+                width: 20%;
+                transform: translateZ(-2px) scale(3);
+                position: absolute;
+                top: 10vh;
+                right: 10vw;
+                z-index: -1;
+            
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img id="background" src="https://static.pexels.com/photos/2855/landscape-mountains-nature-lake.jpg" />
+            <img id="hotair" src="http://www.aerostatpromotions.com/wp-content/uploads/sites/250/2014/01/6-balloon-rainbow_1.png" />
+            <br /> <!--to make gap at top go away-->
+            <h1>Header Text</h1>
+            <br /><br /><br /><br /><br />
+            <h1>Header 2</h1>
+            <br /><br /><br /><br /><br />
+            <h1>Header 3</h1>
+        </div>
+        
+        
+        <script>
+        
+        </script>
+    </body>
+</html>
