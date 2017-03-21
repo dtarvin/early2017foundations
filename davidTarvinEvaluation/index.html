@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Orange is the new Cat</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+        <style>
+            body{
+                font-family: "Montserrat", sans-serif;
+            }
+            
+            #container{
+                height: 100vh;
+                background-image: url("images/playful-kitten-6683.jpg");
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                border: 1px solid black;
+                font-size: 4vh;
+                position: relative;
+            }
+            
+            h1{
+                
+                margin-left: 5vw;
+                margin-top: 1vh;
+            }
+            
+            .orange{
+                color: orange;
+                text-shadow: 2px 2px 2px black;
+            }
+            
+            h2{
+                font-size: 4vh;
+                margin-left: 5vw;
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            #netflix{
+                width: 10vw;
+                margin-top: -1vh;
+            }
+            li{
+                display: inline;
+                float: right;
+                margin-right: 2vw;
+                padding-top: 52vh;
+            }
+            li span{
+                position: relative;
+                transition: top 1s ease-in-out;
+            }
+            li::before{
+                content: url("images/pawprint.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                /*transform: translate(50%);*/
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            li:hover::before{
+                opacity: 1;
+                animation: slide 1s;
+            }
+            li:hover span {
+                top: -4vh;
+            }
+            @keyframes slide{
+                from {
+                    margin-left: -100%;
+                }
+                to {
+                    margin-right: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1><span class="orange">Orange</span> is the new <span class="orange">Cat</span></h1>
+            <h2>only on</h2>
+            <img id="netflix" src="images/netflix.jpg" />
+            <footer>
+                <nav id="menu">
+                    <ul>
+                        <li class="orange"><span>Contact</span></li>
+                        <li class="orange"><span>Schedule</span></li>
+                        <li class="orange"><span>About</span></li>
+                        <li class="orange"><span>Home</span></li>
+                    </ul>
+                    
+                </nav>
+            </footer>
+        
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
+        <script>
+           /* $("li").hover(function(){
+               $(this).css({
+                   margin-top, "48vh";
+                   background-image: url("images/pawprint.png");
+               });
+            }, function(){
+                $(this).css("margin-top", "52vh");
+            });*/
+        </script>
+    </body>
+</html>
