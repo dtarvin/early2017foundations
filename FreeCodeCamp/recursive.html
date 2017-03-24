@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
+        <script>
+        function findSolution(target) {
+              function find(start, history) {
+                if (start == target)
+                  return history;
+                else if (start > target){
+                  return null;
+                }else{
+                    var value = find(start + 5, "(" + history + " + 5)") || find(start * 3, "(" + history + " * 3)");
+                    console.log(value);
+                  return value;
+                }
+              }
+              return find(1, "1");
+            }
+        </script>
+    </body>
+</html>
