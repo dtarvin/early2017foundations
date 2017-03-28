@@ -4,7 +4,7 @@ body{
             
             #container{
                 height: 100vh;
-                background-image: url("images/playful-kitten-6683.jpg");
+                background-image: url("images2/playful-kitten-6683.jpg");
                 background-size: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -34,6 +34,7 @@ body{
             #netflix{
                 width: 10vw;
                 margin-top: -1vh;
+                z-index: -1;
             }
             li{
                 display: inline;
@@ -41,37 +42,37 @@ body{
                 margin-right: 2vw;
                 padding-top: 52vh;
             }
-            /*#paw{
+            #paw{
                 position: relative;
                 top: 52vh;
                 left: 0;
                 transition: 1s;
-            }*/
+                /*display: none;*/
+            }
             li span{
                 position: relative;
                 transition: top 1s ease-in-out;
             }
-            li::before{
-                content: url("images/pawprint.png");
+            /*li::before{
+                content: url("images2/pawprint.png");
                 background-repeat: no-repeat;
                 position: absolute;
-                transform: translate(100%);
                 opacity: 0;
                 transition: opacity 1s ease-in-out;
             }
             li:hover::before{
                 opacity: 1;
                 animation: slide 1s;
-            }
+            }*/
             
             li:hover span {
                 top: -4vh;
             }
-            @keyframes slide{
+            /*@keyframes slide{
                 from {
                     margin-left: -100%;
                 }
                 to {
                     margin-left: 0%;
                 }
-            }
+            }*/

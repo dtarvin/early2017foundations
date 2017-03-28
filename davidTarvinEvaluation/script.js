@@ -1,3 +1,11 @@
+$("li").hover(function(){
+    var p=$(this).position;
+    
+});
+
+
+
+
 /* $("li").hover(function(){
                $(this).css({
                    margin-top, "48vh";
