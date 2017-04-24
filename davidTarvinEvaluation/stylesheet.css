@@ -43,8 +43,9 @@
                 float: right;
                 padding-left: 1vw;
                 padding-right: 1vw;
-                padding-bottom: 10vh;
+                padding-bottom: 0;
                 padding-top: 52vh;
+                vertical-align: bottom;
             }
             #paw{
                 position: relative;
@@ -72,7 +73,7 @@
             }*/
             
             li:hover span {
-                top: -4vh;
+                padding-bottom: 4vh;
             }
             /*@keyframes slide{
                 from {
