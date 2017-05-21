@@ -1,0 +1,19 @@
+body {
+    width: 100%;
+    background: url("https://s-media-cache-ak0.pinimg.com/originals/5d/9e/07/5d9e078d4b73c7862c42684a4b75b439.jpg");
+    background-size: contain;
+}
+
+img {
+  /*max-width: 100%;*/
+    width: 1000px;
+    height: 1222px;
+  animation: scale .5s forwards;
+  transform-origin: 0% 25%;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(0.25);
+  }
+}

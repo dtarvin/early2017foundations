@@ -1,0 +1,11 @@
+img {
+  max-width: 100%;
+  animation: scale 3s forwards;
+  transform-origin: 50% 0;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(0);
+  }
+}
